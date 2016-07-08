@@ -556,8 +556,9 @@ public class InAppBrowser extends CordovaPlugin {
                 // Toolbar layout
                 RelativeLayout toolbar = new RelativeLayout(cordova.getActivity());
                 //Please, no more black!
-                toolbar.setBackgroundColor(android.graphics.Color.LTGRAY);
-                toolbar.setLayoutParams(new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, this.dpToPixels(44)));
+                //toolbar.setBackgroundColor(android.graphics.Color.LTGRAY);
+                toolbar.setBackgroundColor(android.graphics.Color.parseColor("#1FB6FF"));
+                toolbar.setLayoutParams(new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, this.dpToPixels(56)));
                 toolbar.setPadding(this.dpToPixels(2), this.dpToPixels(2), this.dpToPixels(2), this.dpToPixels(2));
                 toolbar.setHorizontalGravity(Gravity.LEFT);
                 toolbar.setVerticalGravity(Gravity.TOP);
@@ -582,7 +583,7 @@ public class InAppBrowser extends CordovaPlugin {
                 back.setBackground(null);
                 back.setImageDrawable(backIcon);
                 back.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                back.setPadding(0, this.dpToPixels(10), 0, this.dpToPixels(10));
+                back.setPadding(0, this.dpToPixels(16), 0, this.dpToPixels(16));
                 back.getAdjustViewBounds();
 
                 back.setOnClickListener(new View.OnClickListener() {
@@ -603,7 +604,7 @@ public class InAppBrowser extends CordovaPlugin {
                 forward.setBackground(null);
                 forward.setImageDrawable(fwdIcon);
                 forward.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                forward.setPadding(0, this.dpToPixels(10), 0, this.dpToPixels(10));
+                forward.setPadding(0, this.dpToPixels(16), 0, this.dpToPixels(16));
                 forward.getAdjustViewBounds();
 
                 forward.setOnClickListener(new View.OnClickListener() {
@@ -647,7 +648,7 @@ public class InAppBrowser extends CordovaPlugin {
                 close.setBackground(null);
                 close.setImageDrawable(closeIcon);
                 close.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                back.setPadding(0, this.dpToPixels(10), 0, this.dpToPixels(10));
+                back.setPadding(0, this.dpToPixels(16), 0, this.dpToPixels(16));
                 close.getAdjustViewBounds();
 
                 close.setOnClickListener(new View.OnClickListener() {
@@ -712,7 +713,7 @@ public class InAppBrowser extends CordovaPlugin {
 
                 // Add the views to our toolbar
                 toolbar.addView(actionButtonContainer);
-                toolbar.addView(edittext);
+                //toolbar.addView(edittext);
                 toolbar.addView(close);
 
                 // Don't add the toolbar if its been disabled
